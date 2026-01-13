@@ -79,7 +79,7 @@ export default function Home() {
       {/* Intro Text */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl font-bold mb-6">Qualität und Sicherheit am Bau</h2>
-        <p className="text-lg text-gray-600 leading-relaxed">
+        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
           Wir sind Ihr Gerüstbauer für grosse und kleine Objekte im Grossraum Winterthur und Zürich. 
           Bis zu 8 Arbeitsgruppen sind täglich im Einsatz. Unsere Kunden schätzen unsere Zuverlässigkeit 
           und Flexibilität. Wir legen grossen Wert auf Qualität und Pünktlichkeit.
