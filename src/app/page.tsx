@@ -43,7 +43,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-primary hover:transform hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Seit 40 Jahren</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Seit 40 Jahren</h3>
             <p className="text-gray-600 mb-6">
               Erfahrung und Zuverlässigkeit seit 1978. Wir sind Ihr etablierter Partner in der Region.
             </p>
@@ -54,7 +54,7 @@ export default function Home() {
           
           {/* Card 2 */}
           <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-primary hover:transform hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Gerüstbau</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Gerüstbau</h3>
             <p className="text-gray-600 mb-6">
               Fassadengerüste, Dachdeckergerüste, Notdächer und mehr. Wir haben das Passende für Sie.
             </p>
@@ -65,7 +65,7 @@ export default function Home() {
           
           {/* Card 3 */}
           <div className="bg-white p-8 rounded-lg shadow-xl border-t-4 border-primary hover:transform hover:-translate-y-1 transition-transform duration-300">
-            <h3 className="text-2xl font-bold mb-4">Galerie</h3>
+            <h3 className="text-2xl font-bold mb-4 text-gray-900">Galerie</h3>
             <p className="text-gray-600 mb-6">
               Machen Sie sich ein Bild von unserer Arbeit. Unsere Referenzprojekte sprechen für sich.
             </p>

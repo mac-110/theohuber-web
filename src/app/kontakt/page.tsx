@@ -40,7 +40,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Adresse</h3>
-                <p className="text-gray-600">Gewerbestrasse 5<br/>8404 Winterthur</p>
+                <p className="text-gray-600 dark:text-gray-300">Gewerbestrasse 5<br/>8404 Winterthur</p>
               </div>
             </div>
 
@@ -50,10 +50,10 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Telefon</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   <a href="tel:+41522337373" className="hover:text-primary">052 233 73 73</a>
                 </p>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   <span className="font-medium">Mobile:</span> <a href="tel:+41792385040" className="hover:text-primary">+41 79 238 50 40</a>
                 </p>
               </div>
@@ -65,7 +65,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">E-Mail</h3>
-                <p className="text-gray-600">
+                <p className="text-gray-600 dark:text-gray-300">
                   <a href="mailto:info@theohuber.ch" className="hover:text-primary">info@theohuber.ch</a>
                 </p>
               </div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <h3 className="font-bold text-lg">Erreichbarkeit</h3>
-                <p className="text-gray-600">Montag - Freitag<br/>07:00 - 12:00 / 13:00 - 17:00</p>
+                <p className="text-gray-600 dark:text-gray-300">Montag - Freitag<br/>07:00 - 12:00 / 13:00 - 17:00</p>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function ContactPage() {
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-xl border border-gray-100">
-          <h2 className="text-2xl font-bold mb-6">Schreiben Sie uns</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">Schreiben Sie uns</h2>
           
           {status === "success" ? (
             <div className="bg-green-50 text-green-800 p-6 rounded-lg text-center">
@@ -114,7 +114,7 @@ export default function ContactPage() {
                   required
                   value={formState.name}
                   onChange={e => setFormState({...formState, name: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow text-gray-900 bg-white"
                 />
               </div>
               
@@ -127,7 +127,7 @@ export default function ContactPage() {
                     required
                     value={formState.email}
                     onChange={e => setFormState({...formState, email: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow text-gray-900 bg-white"
                   />
                 </div>
                 <div>
@@ -137,7 +137,7 @@ export default function ContactPage() {
                     id="phone"
                     value={formState.phone}
                     onChange={e => setFormState({...formState, phone: e.target.value})}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow text-gray-900 bg-white"
                   />
                 </div>
               </div>
@@ -150,7 +150,7 @@ export default function ContactPage() {
                   required
                   value={formState.message}
                   onChange={e => setFormState({...formState, message: e.target.value})}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow resize-none"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-primary focus:border-primary outline-none transition-shadow resize-none text-gray-900 bg-white"
                 ></textarea>
               </div>
 

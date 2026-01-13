@@ -24,7 +24,7 @@ export function Navbar() {
             <Link href="/" className="flex-shrink-0 flex items-center gap-2">
               <div className="relative h-10 w-auto">
                  {/* Fallback falls Bild nicht lädt oder als Platzhalter für Text-Logo */}
-                 <span className="font-bold text-2xl tracking-tighter">THEO<span className="text-primary">HUBER</span>AG</span>
+                 <span className="font-bold text-2xl tracking-tighter"><span className="text-black">THEO</span><span className="text-primary">HUBER</span><span className="text-black">AG</span></span>
               </div>
             </Link>
           </div>

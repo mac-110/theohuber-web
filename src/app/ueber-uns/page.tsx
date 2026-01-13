@@ -14,7 +14,7 @@ export default function AboutPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
         <div>
           <h2 className="text-2xl font-bold mb-4 text-primary">Unsere Geschichte</h2>
-          <div className="prose prose-lg text-gray-700">
+          <div className="prose prose-lg text-gray-700 dark:text-gray-300">
             <p className="mb-4">
               Die Geschichte der Theo Huber AG begann im Jahr 1978, als das Unternehmen als Einzelfirma vom gelernten Schlosser Theo Huber gegründet wurde.
             </p>
@@ -42,7 +42,7 @@ export default function AboutPage() {
 
       <div className="bg-muted p-8 rounded-lg mb-16">
         <h2 className="text-2xl font-bold mb-6 text-primary">Das Team</h2>
-        <div className="prose prose-lg text-gray-700 max-w-none">
+        <div className="prose prose-lg text-gray-700 dark:text-gray-300 max-w-none">
           <p className="mb-4">
             Erfahrene Chefmonteure und Gruppenführer leiten unsere Arbeitsgruppen. Je nach Saison sind zwischen 12 und 20 qualifizierte Gerüstbauer täglich für Sie im Einsatz.
           </p>
