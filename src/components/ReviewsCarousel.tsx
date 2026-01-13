@@ -8,19 +8,10 @@ import { api } from "../../convex/_generated/api";
 
 export function ReviewsCarousel() {
   // Lade Reviews aus der Datenbank (live)
-  // Verwende 'any' Typ-Umgehung für die Build-Zeit, da die API-Typen erst generiert werden müssen
-  let reviews: any[] | undefined = undefined;
-  try {
-     reviews = useQuery(api.reviews.getTopReviews);
-  } catch(e) {
-     // Ignoriere Fehler während Setup
-  }
+  const reviews = useQuery(api.reviews.getTopReviews);
   
   // Action zum manuellen Aktualisieren
-  let syncReviews: any = () => {};
-  try {
-     syncReviews = useAction(api.reviews.syncGoogleReviews);
-  } catch(e) {}
+  const syncReviews = useAction(api.reviews.syncGoogleReviews);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
@@ -77,7 +68,7 @@ export function ReviewsCarousel() {
       alert("Rezensionen aktualisiert!");
     } catch (err) {
       console.error(err);
-      alert("Konnte nicht aktualisieren (Läuft Backend 'npx convex dev'?)");
+      alert("Konnte nicht aktualisieren. Prüfen Sie die Logs.");
     } finally {
       setIsSyncing(false);
     }

@@ -9,36 +9,11 @@ export default function ContactPage() {
   const [formState, setFormState] = useState({ name: "", email: "", phone: "", message: "" });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   
-  // Safe useMutation usage - if api.messages.send is a string (dummy), useMutation might fail if called directly
-  // In real scenario, api.messages.send is a FunctionReference.
-  // We wrap it to avoid crash during render if types don't match dummy
-  let send: any = () => {};
-  try {
-     // This hook call must be unconditional.
-     // In a real app with generated code, this just works.
-     // With our dummy, we need to be careful not to crash.
-     // However, useMutation expects a specific object structure.
-     // For this demo setup, we accept that it might throw if connected to real convex client with dummy ref.
-     send = useMutation(api.messages.send); 
-  } catch (e) {
-     // Ignore hook errors for dummy setup
-  }
+  const send = useMutation(api.messages.send);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Check if we are in dummy mode
-    if (api.messages.send === "dummy-mutation-reference") {
-      alert("Hinweis: Das Backend ist noch nicht aktiv. Bitte starten Sie 'npx convex dev' in der Konsole, um Nachrichten wirklich zu speichern.");
-      // Simulate success for UX demo
-      setStatus("submitting");
-      setTimeout(() => {
-          setStatus("success");
-          setFormState({ name: "", email: "", phone: "", message: "" });
-      }, 1000);
-      return;
-    }
-
     setStatus("submitting");
     try {
       await send(formState);
