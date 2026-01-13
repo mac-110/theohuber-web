@@ -103,7 +103,7 @@ export default function Home() {
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3 bg-white p-4 rounded shadow-sm border border-gray-100">
                 <CheckCircle2 className="text-primary flex-shrink-0" />
-                <span className="font-medium">{item}</span>
+                <span className="font-medium text-gray-900">{item}</span>
               </div>
             ))}
           </div>
